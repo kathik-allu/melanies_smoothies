@@ -1,4 +1,6 @@
 name: app_environment
+snowflake-snowpark-python
+streamlit
 channels:
   - snowflake
 dependencies:
