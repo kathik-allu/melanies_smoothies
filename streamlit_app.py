@@ -1,6 +1,5 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
-# Write directly to the app
 st.title(":cup_with_straw: Custamise Your Smoothie :cup_with_straw:")
 st.write(
     """Choose the fruits to custamise your own Smoothie
@@ -25,9 +24,7 @@ if ingredients_list:
     ingredients_string = ''
 
     for fruit_chosen in ingredients_list:
-        ingredients_string += fruit_chosen + ' '
-        
-    #st.write(ingredients_string)         
+        ingredients_string += fruit_chosen + ' '         
 
      
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
